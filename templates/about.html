@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+      <section class="page-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-content">
+                <h4>about us</h4>
+                <h2>more about us!</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Banner Ends Here -->
+
+
+    <section class="about-us">
+      <div class="container">
+      	
+        <div class="row">
+          <div class="col-lg-12">
+            <img src="{% static 'assets/images/about_seed_pink.png' %}" alt="">
+            <p>
+              <strong>Seed pink is name for confidence and strength!</strong><br> 
+              It's about you, feeling beautiful, healthy, and happy."<br>
+              We believe that when you look good, you feel good. And when you feel good, you can take on the world.<br>
+              We know that feeling good starts from within. That's why we focus on promoting beauty, health, and wellness from the inside out. We want to help you feel confident and beautiful, no matter what life throws your way.<br>
+              Seed pink is more than just a brand! It's a community of strong, powerful, and passionate people caring for themselves and each other. <br>
+              We're here to support you on your journey to becoming your best self. <br>
+              <h1>Welcome to Seed pink!</h1>
+
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="social-icons">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        
+        
+      </div>
+    </section>
+
+    {% endblock body %}

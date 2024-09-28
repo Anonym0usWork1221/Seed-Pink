@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filter_tags %}
+{% block title %}Posts{% endblock title %}
+
+{% block body %}
+
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="heading-page header-text">
+      <section class="page-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-content">
+                <h4>Post Details</h4>
+                <h2>{{post_details.title}}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Banner Ends Here -->
+
+    <section class="blog-posts grid-system">
+      <div class="container">
+        <div class="row">
+
+            <div class="all-blog-posts">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="blog-post">
+                    <div class="blog-thumb" style="height:600px;">
+                      <img src="{{post_details.title_picture.url}}" alt="" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="down-content" style="border:1px solid black;">
+                      <span>{{post_details.catagory}}</span>
+                      <a href="/post-details/{{post_details.slug}}"><h4>{{post_details.title}}</h4></a>
+                      <ul class="post-info">
+                        <li><a href="#">{{post.user_name}}</a></li>
+                        <li><a href="#">{{post_details.date}}</a></li>
+                      </ul>
+                      
+                      <div class="descriptionDiv">
+                        <p>{{description | safe}}</p><br>
+
+                        <div class="post-options">
+                          <div class="row">
+                            <div class="col-6">
+                              <ul class="post-tags">
+                                {% with post_details.tags|split:"," as tags %}
+                                  {% for i in tags %}
+                                    <li><i class="fa fa-tags" style="color:#f48840"></i></li>
+                                    <li><a href="/tags?tag_id={{i}}">{{i}}</a></li>
+                                  {% endfor %}
+                                {% endwith %}  
+                              </ul>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock body %}
